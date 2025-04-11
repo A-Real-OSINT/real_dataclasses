@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "dataclasses"
+name = "real_dataclasses"
 version = "0.1.0"
 description = ""
 authors = ["mo"]
