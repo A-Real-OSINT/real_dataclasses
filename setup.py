@@ -1,0 +1,14 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="dataclasses",
+    version="0.1",
+    description="Dataclasses for the a-real OSINT toolset",
+    long_description=long_description,
+    install_requires=[],
+    long_description_content_type="text/markdown",
+    url="https://github.com/a-real-osint/dataclassses",
+    packages=["dataclasses"])
