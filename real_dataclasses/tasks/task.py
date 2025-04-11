@@ -14,7 +14,7 @@ class Task:
         :return: task_id
         :rtype: str
         """
-        self.task_id = uuid4()
+        self.task_id = str(uuid4())
         self.created_at = datetime.now()    
         self.status = "created"
         self.result = None
@@ -23,4 +23,29 @@ class Task:
         self.task_type = task_type
         
         return self.task_id
+    
+    def _json_str(self) -> str:
+        """
+        Converts the task to a JSON string.
+        :return: JSON string representation of the task.
+        :rtype: str
+        """
         
+        raise NotImplementedError("This method should be implemented in a subclass.")
+    
+    def _jsonify(self) -> dict:
+        """
+        Converts the task to a JSON-compatible dictionary.
+        :return: Dictionary representation of the task.
+        :rtype: dict
+        """
+        
+        return {
+            "task_id": self.task_id,
+            "created_at": self.created_at.isoformat(),
+            "status": self.status,
+            "result": self.result,
+            "blob_id": self.blob_id,
+            "result_id": self.result_id,
+            "task_type": self.task_type
+        }
