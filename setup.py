@@ -10,5 +10,5 @@ setuptools.setup(
     long_description=long_description,
     install_requires=[],
     long_description_content_type="text/markdown",
-    url="https://github.com/a-real-osint/dataclassses",
+    url="https://github.com/a-real-osint/real_dataclassses",
     packages=["real_dataclasses"])
