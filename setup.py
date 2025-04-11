@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="real_dataclasses",
-    version="0.3.0",
+    version="0.3.1",
     description="Real Dataclasses for the a-real OSINT toolset",
     long_description=long_description,
     install_requires=[],

@@ -6,13 +6,13 @@ class Task:
     This class represents a task in the system and will be used to manage tasks.
     """
     
-    def __init__(self, task_type: str) -> str:
+    def __init__(self, task_type: str) -> None:
         """
         creates an instance of Task.
         :param task_type: The type of the task.
         :type task_type: str
-        :return: task_id
-        :rtype: str
+        :return: None
+        :rtype: None
         """
         self.task_id = str(uuid4())
         self.created_at = datetime.now()    
@@ -21,8 +21,7 @@ class Task:
         self.blob_id = None
         self.result_id = None
         self.task_type = task_type
-        
-        return self.task_id
+    
     
     def _json_str(self) -> str:
         """

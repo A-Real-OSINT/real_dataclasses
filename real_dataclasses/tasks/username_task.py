@@ -1,4 +1,4 @@
-from task import Task
+from .task import Task
 from typing import override
 import json
 
@@ -7,19 +7,19 @@ class UsernameTask(Task):
     This class represents a username task in the system and will be used to manage username tasks.
     """
     
-    def __init__(self, username: str) -> str:
+    def __init__(self, username: str) -> None:
         """
         Creates an instance of UsernameTask.
         :param task_id: The unique identifier for the task.
         :type task_id: str
         :param username: The username associated with the task.
         :type username: str
-        :return: The task_id of the newly created task.
-        :rtype: str
+        :return: None
+        :rtype: None
         """
         
         self.username = username
-        return super().__init__("username")
+        super().__init__("username")
         
     
     def __str__(self):
